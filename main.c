@@ -93,10 +93,9 @@ int main(int Argc, char *Argv[])
 	}
 
 
-	for (;;)
+	for (;getstring(stdin, &buffer)!=1;)
 	{
 		is_in = 0;
-		getstring(stdin, &buffer);
 		if (strstr("exit", buffer))
 			break;
 		for (int i = 0; i < sch; i++)
